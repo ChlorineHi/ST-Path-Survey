@@ -1,7 +1,7 @@
 # Awesome ST-Path Survey: Multimodal Fusion for Spatial Transcriptomics and Pathology
 
 <p align="center">
-  <img src="review-formal.png" alt="Survey Overview" width="100%">
+  <img src="emb.png" alt="Survey Overview" width="100%">
 </p>
 
 
