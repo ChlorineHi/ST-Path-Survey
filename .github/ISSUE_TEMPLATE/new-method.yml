@@ -1,0 +1,52 @@
+name: New method or resource
+description: Suggest a paper, model, dataset, benchmark, or correction.
+title: "[Resource]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Please use primary or official sources and consult resources/inclusion-criteria.md."
+  - type: input
+    id: name
+    attributes:
+      label: Method or resource name
+    validations:
+      required: true
+  - type: input
+    id: primary_source
+    attributes:
+      label: Primary source URL
+    validations:
+      required: true
+  - type: input
+    id: code_data
+    attributes:
+      label: Official code, model, or data URL
+  - type: dropdown
+    id: status
+    attributes:
+      label: Publication status
+      options:
+        - Peer reviewed
+        - Preprint
+        - Dataset or database
+        - Software or model release
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Proposed scope label
+      options:
+        - Core
+        - Boundary / transitional
+        - Adjacent support
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Classification rationale
+      description: State the paired modalities and dominant fusion operation.
+    validations:
+      required: true
