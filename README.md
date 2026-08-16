@@ -97,4 +97,6 @@ If this survey or repository supports your work, please cite:
 
 This repository indexes third-party papers, software, models, and datasets. Their original licenses and terms remain authoritative. The taxonomy figure and repository curation should be attributed to the survey authors.
 
+Repository restructuring and maintenance were assisted by [OpenAI Codex](https://openai.com/codex/).
+
 _Last updated: 2026-08-16_
