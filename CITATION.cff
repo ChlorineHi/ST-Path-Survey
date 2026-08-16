@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this survey or repository, please cite the accompanying manuscript."
+title: "From Representation Learning to Foundation Models: A Survey of Multimodal Fusion for Spatial Transcriptomics and Pathology"
+type: article
+authors:
+  - family-names: Wang
+    given-names: Jingxuan
+  - family-names: Hu
+    given-names: Dayu
+year: 2026
+repository-code: "https://github.com/ChlorineHi/ST-Path-Survey"
+keywords:
+  - spatial transcriptomics
+  - computational pathology
+  - multimodal fusion
+  - spatial omics
+  - foundation models
+  - knowledge-guided learning
