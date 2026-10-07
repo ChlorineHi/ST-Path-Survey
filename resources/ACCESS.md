@@ -1,0 +1,58 @@
+# Data Access
+
+## Official Sources
+
+Official repositories and archives are the authoritative data sources. Start with [the dataset catalog](datasets.md), its source notes, or [the machine-readable CSV](dataset_catalog.csv). Cite the original publications and dataset records. Author code, preprocessing instructions, sample IDs and release limitations are linked in the catalog.
+
+## ST-Survey Shared Archive
+
+A supplementary collection is maintained through [ST-Survey on Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42).
+
+**Extraction code:** `wq42`.
+
+The archive is intended for selected representative datasets, annotations, metadata, lightweight processed files, or supplementary resources. Availability varies across datasets. It supplements official access routes and does not replace them.
+
+As of **2026-10-07**, the URL was checked and reaches a Baidu extraction-code entry page. The directory listing was not accessible in this verification session. **No dataset is confirmed mirrored.** All catalog entries point only to the shared collection; dataset-level availability is not independently verified. No dataset subfolder or file name is asserted.
+
+## Mirror Status
+
+The CSV uses four allowed values:
+
+- `available`: the specific dataset or identified processed resource has been confirmed in the archive, and its redistribution terms have been checked. Document the release, file identity, provenance, license and verification date.
+- `shared_archive`: the common ST-Survey archive exists, but this dataset's presence has not been independently verified. The table displays “Shared archive” and the CSV uses the collection URL. This does not imply the dataset is uploaded.
+- `not_mirrored`: confirmed absent from the maintained collection. Display `—` and leave `mirror_url` empty.
+- `unknown`: no reliable mirror status is known. Display “To be verified” and leave `mirror_url` empty unless a verifiable common collection is known; use `shared_archive` for the latter case.
+
+Every current record uses `shared_archive` with the exact common URL above. Neither a successful HTTP response nor access to an extraction page establishes dataset-level availability.
+
+## Redistribution
+
+Mirror files only when the original license or terms permit redistribution. If permission is unclear, list the official source without asserting or creating a dataset mirror. The shared-archive link is a collection-level access reference, not evidence of permission for any individual row.
+
+The selected 10x Visium HD and Xenium pages state CC BY 4.0. HEST's dataset card states CC BY-NC-SA 4.0 and requires acceptance of access conditions. Check the exact release and original cohort terms before any redistribution. Publication or software licenses do not automatically establish dataset or third-party image licensing. Other entries' dataset redistribution licenses remain **To be verified**.
+
+## Large Files
+
+Large raw datasets are not stored directly in this GitHub repository. Do not commit raw matrices, whole-slide image collections or sequencing reads, or use Git LFS to host large public datasets. This catalog contains documentation and lightweight metadata only.
+
+## Processed Resources
+
+Where permitted, lightweight processed matrices, annotations, metadata, benchmark splits, preprocessing scripts or model-ready files may be shared separately. Record source accession/URL, release and sample IDs, license, transformation and software versions, registration/QC, split unit, file size and checksum before claiming availability. Keep raw and processed resources distinguishable.
+
+No processed dataset files or dataset-level mirror mappings are included in this update. Add corresponding directories only when populated resources exist.
+
+## Dataset-Specific Access Notes
+
+- **DLPFC:** use the author manifest and spatialLIBD/ExperimentHub for processed data; the original article links Globus for raw FASTQs and images.
+- **HER2ST:** use the versioned Zenodo record and the author's password guidance for that release. Pathology annotations cover only one section per patient.
+- **cSCC:** select GSE144239 for ST, and identify the original-ST or Visium-validation subset explicitly. GSE144240 is the broader SuperSeries.
+- **PDAC:** GEO verifies eight Visium sections and pathology annotation. Public image/coordinate/annotation files are **To be verified**, so matrices alone should not be treated as a complete image-paired benchmark.
+- **HEST:** accept the official Hugging Face conditions and pin the metadata release and sample IDs. The live collection differs from the 2024 paper cohort.
+- **Visium HD / Xenium:** use the selected vendor pages' output/supplemental and input-file tabs. Obtain the matching histology and alignment files; preserve the stated software version.
+- **CosMx / MOSTA:** use the specific vendor/atlas release. IF or anatomical context does not establish matched H&E pairing.
+
+## Broken Links
+
+Open a [GitHub issue](https://github.com/ChlorineHi/ST-Path-Survey/issues) if an official or mirror link becomes unavailable. Include the dataset, accession/release, affected URL and the date/error observed. Browser challenges, gated downloads and rate limits should be distinguished from a missing resource.
+
+During the 2026-10-07 check, the curated tables rendered successfully through GitHub's GFM renderer and all nine publication DOIs matched their registered titles through Crossref. Direct automated requests to some GEO, Bruker/CosMx and bioRxiv pages encountered browser challenges; 10x requests encountered rate limits even though the dataset pages were readable through the browsing tool. GEO sample metadata was independently read from NCBI's small MINiML archives. HEST downloads remain gated, and the Baidu check reached only the extraction-code page. These conditions do not establish a broken link or confirm file-level download access.
