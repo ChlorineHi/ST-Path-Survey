@@ -4,6 +4,16 @@
 
 Official repositories and archives are the authoritative data sources. Start with [the dataset catalog](datasets.md), its source notes, or [the machine-readable CSV](dataset_catalog.csv). Cite the original publications and dataset records. Author code, preprocessing instructions, sample IDs and release limitations are linked in the catalog.
 
+## GitHub Release Downloads
+
+Three selected ST–histology sample packages are available from [the 2026-10-07 GitHub Release](https://github.com/ChlorineHi/ST-Path-Survey/releases/tag/datasets-2026-10-07): human breast cancer (STDS0000027), mouse brain coronal section (STDS0000022), and human lymph node (STDS0000024). Their ZIPs total **167,059,611 bytes (167.1 MB)**.
+
+The ZIPs include AnnData expression matrices, paired H&E PNGs, spatial positions/scale factors, original URLs, attribution and license notices. All expression barcodes were matched to the spatial-position tables before packaging. Uploaded GitHub asset sizes and server SHA256 values were checked against the local files. [Manifest](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/DATASET_MANIFEST.json) and [checksums](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/SHA256SUMS.txt) are also published.
+
+The original 10x datasets state CC BY 4.0. These are single-section processed samples retrieved through STOmicsDB; they are not full cohorts, raw FASTQs or full-resolution WSI. The downloaded lymph-node representation has 4,039 observations, compared with 4,035 spots on the current vendor page; the package preserves and documents this difference. See [the catalog's downloadable samples](datasets.md#downloadable-representative-samples).
+
+GitHub Releases supplement official sources and replace the need to upload these three packages to Baidu Netdisk. A published GitHub asset does not imply that the corresponding data are present in Baidu.
+
 ## ST-Survey Shared Archive
 
 A supplementary collection is maintained through [ST-Survey on Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42).
@@ -12,18 +22,18 @@ A supplementary collection is maintained through [ST-Survey on Baidu Netdisk](ht
 
 The archive is intended for selected representative datasets, annotations, metadata, lightweight processed files, or supplementary resources. Availability varies across datasets. It supplements official access routes and does not replace them.
 
-As of **2026-10-07**, the maintainer reported that the shared folder is empty. **No datasets have been uploaded or confirmed mirrored in this session.** All nine catalog entries are `not_mirrored`, with an empty `mirror_url` and `—` in the table. The common folder link is retained for future permitted uploads. The automated check reached only the extraction-code page; the empty-folder status is based on the maintainer report, not an independently inspected directory listing. No dataset subfolder or file name is asserted.
+As of **2026-10-07**, the maintainer reported that the shared folder is empty. **No Baidu datasets have been uploaded or confirmed mirrored in this session.** The nine original survey-resource rows remain `not_mirrored`, with an empty `mirror_url` and `—` in the table. Three additional vendor-sample rows are `available` through verified GitHub Release assets as described above. The common folder link is retained for future permitted uploads. The automated check reached only the extraction-code page; the empty-folder status is based on the maintainer report, not an independently inspected directory listing. No dataset subfolder or file name is asserted.
 
 ## Mirror Status
 
 The CSV uses four allowed values:
 
-- `available`: the specific dataset or identified processed resource has been confirmed in the archive, and its redistribution terms have been checked. Document the release, file identity, provenance, license and verification date.
+- `available`: the specific dataset or identified processed resource has been confirmed at a supplementary distribution endpoint, such as a GitHub Release asset, and its redistribution terms have been checked. Document the release, file identity, provenance, license and verification date.
 - `shared_archive`: the common ST-Survey archive exists, but this dataset's presence has not been independently verified. The table displays “Shared archive” and the CSV uses the collection URL. This does not imply the dataset is uploaded.
 - `not_mirrored`: confirmed absent from the maintained collection. Display `—` and leave `mirror_url` empty.
 - `unknown`: no reliable mirror status is known. Display “To be verified” and leave `mirror_url` empty unless a verifiable common collection is known; use `shared_archive` for the latter case.
 
-Every current record uses `not_mirrored` based on the maintainer report. Neither local downloading, a successful HTTP response nor access to an extraction page establishes dataset-level mirror availability. Update status only after checking actual files in the public shared folder.
+The nine original survey-resource rows use `not_mirrored`; the three published vendor-sample rows use `available` with actual GitHub asset URLs. Neither local downloading, a successful HTTP response nor access to an extraction page establishes dataset-level mirror availability. Update status only after checking actual files at the specific distribution endpoint.
 
 ## Redistribution
 
@@ -33,13 +43,13 @@ The selected 10x Visium HD and Xenium pages state CC BY 4.0. HEST's dataset card
 
 ## Large Files
 
-Large raw datasets are not stored directly in this GitHub repository. Do not commit raw matrices, whole-slide image collections or sequencing reads, or use Git LFS to host large public datasets. This catalog contains documentation and lightweight metadata only.
+Large raw datasets are not stored directly in this GitHub repository. Do not commit raw matrices, whole-slide image collections or sequencing reads, or use Git LFS to host large public datasets. This catalog contains documentation and lightweight metadata only. The three representative processed packages are distributed as GitHub Release assets outside the code commit history.
 
 ## Processed Resources
 
 Where permitted, lightweight processed matrices, annotations, metadata, benchmark splits, preprocessing scripts or model-ready files may be shared separately. Record source accession/URL, release and sample IDs, license, transformation and software versions, registration/QC, split unit, file size and checksum before claiming availability. Keep raw and processed resources distinguishable.
 
-No processed dataset files or dataset-level mirror mappings are included in this update. Add corresponding directories only when populated resources exist.
+Three representative processed packages and their dataset-level GitHub Release mappings are now available as described above. No data binaries are committed to the repository. Add corresponding code-tree directories only when populated lightweight resources exist.
 
 ## Dataset-Specific Access Notes
 
