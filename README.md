@@ -3,7 +3,7 @@
 ### Papers, methods, datasets, foundation models, benchmarks, and tools for multimodal ST–pathology research
 
 <p align="center">
-  <img src="assets/figures/taxonomy.jpg" alt="Taxonomy of multimodal fusion for spatial transcriptomics and pathology" width="100%">
+  <img src="assets/figures/fig1.png" alt="Taxonomy of multimodal fusion for spatial transcriptomics and pathology" width="100%">
 </p>
 
 <p align="center">
