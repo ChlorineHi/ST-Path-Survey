@@ -26,6 +26,7 @@ Methods are classified by their **dominant fusion mechanism**. Foundation models
 - [B. Interaction-level fusion](#b-interaction-level-fusion)
 - [C. Knowledge-constrained fusion](#c-knowledge-constrained-fusion)
 - [D. Foundation-model scaling](#d-foundation-model-scaling)
+- [Datasets and Benchmark Resources](#datasets-and-benchmark-resources)
 - [Datasets and databases](#datasets-and-databases)
 - [Benchmarks and evaluation](#benchmarks-and-evaluation)
 - [Useful libraries](#useful-libraries)
@@ -218,6 +219,16 @@ These methods inject structured knowledge or add an evidence-grounded interpreta
 | 2026 | ChatSpatial | Reproducible agentic orchestration | ○ | [Search](https://www.biorxiv.org/search/ChatSpatial) |
 | 2025 | SpatialAgent | Autonomous spatial-biology analysis | ○ | [Search](https://www.biorxiv.org/search/SpatialAgent) |
 
+## Datasets and Benchmark Resources
+
+A curated catalog of public ST–pathology datasets, accession numbers, official download links, benchmark uses, code, and supplementary resources is available in [the existing resource guide](resources/datasets.md). The catalog distinguishes direct histology–ST benchmarks from boundary and adjacent high-resolution spatial-omics resources.
+
+- [Dataset catalog](resources/datasets.md)
+- [Machine-readable CSV](resources/dataset_catalog.csv)
+- [Data access and mirror policy](resources/ACCESS.md)
+
+A supplementary **ST-Survey** resource archive is available through [Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42). Extraction code: `wq42`. Dataset-level mirror availability has not been independently verified; official sources remain authoritative.
+
 ## Datasets and databases
 
 | Resource | Platform / regime | Paired information | Typical use | Access |
@@ -274,4 +285,4 @@ Corrections, new papers, official code, dataset accessions, and benchmark update
 
 Third-party licenses and terms remain authoritative. Repository restructuring and maintenance were assisted by [OpenAI Codex](https://openai.com/codex/).
 
-_Last updated: 2026-08-16_
+_Last updated: 2026-10-07_
