@@ -227,7 +227,7 @@ A curated catalog of public ST–pathology datasets, accession numbers, official
 - [Machine-readable CSV](resources/dataset_catalog.csv)
 - [Data access and mirror policy](resources/ACCESS.md)
 
-A supplementary **ST-Survey** resource archive is available through [Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42). Extraction code: `wq42`. Dataset-level mirror availability has not been independently verified; official sources remain authoritative.
+A supplementary **ST-Survey** resource archive is available through [Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42). Extraction code: `wq42`. The maintainer reported the folder empty on 2026-10-07; no datasets are currently recorded as mirrored. Official sources remain authoritative.
 
 ## Datasets and databases
 
