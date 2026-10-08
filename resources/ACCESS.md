@@ -12,32 +12,9 @@ The ZIPs include AnnData expression matrices, paired H&E PNGs, spatial positions
 
 The original 10x datasets state CC BY 4.0. These are single-section processed samples retrieved through STOmicsDB; they are not full cohorts, raw FASTQs or full-resolution WSI. The downloaded lymph-node representation has 4,039 observations, compared with 4,035 spots on the current vendor page; the package preserves and documents this difference. See [the catalog's downloadable samples](datasets.md#downloadable-representative-samples).
 
-GitHub Releases supplement official sources and replace the need to upload these three packages to Baidu Netdisk. A published GitHub asset does not imply that the corresponding data are present in Baidu.
-
-## ST-Survey Shared Archive
-
-A supplementary collection is maintained through [ST-Survey on Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42).
-
-**Extraction code:** `wq42`.
-
-The archive is intended for selected representative datasets, annotations, metadata, lightweight processed files, or supplementary resources. Availability varies across datasets. It supplements official access routes and does not replace them.
-
-As of **2026-10-07**, the maintainer reported that the shared folder is empty. **No Baidu datasets have been uploaded or confirmed mirrored in this session.** The nine original survey-resource rows remain `not_mirrored`, with an empty `mirror_url` and `—` in the table. Three additional vendor-sample rows are `available` through verified GitHub Release assets as described above. The common folder link is retained for future permitted uploads. The automated check reached only the extraction-code page; the empty-folder status is based on the maintainer report, not an independently inspected directory listing. No dataset subfolder or file name is asserted.
-
-## Mirror Status
-
-The CSV uses four allowed values:
-
-- `available`: the specific dataset or identified processed resource has been confirmed at a supplementary distribution endpoint, such as a GitHub Release asset, and its redistribution terms have been checked. Document the release, file identity, provenance, license and verification date.
-- `shared_archive`: the common ST-Survey archive exists, but this dataset's presence has not been independently verified. The table displays “Shared archive” and the CSV uses the collection URL. This does not imply the dataset is uploaded.
-- `not_mirrored`: confirmed absent from the maintained collection. Display `—` and leave `mirror_url` empty.
-- `unknown`: no reliable mirror status is known. Display “To be verified” and leave `mirror_url` empty unless a verifiable common collection is known; use `shared_archive` for the latter case.
-
-The nine original survey-resource rows use `not_mirrored`; the three published vendor-sample rows use `available` with actual GitHub asset URLs. Neither local downloading, a successful HTTP response nor access to an extraction page establishes dataset-level mirror availability. Update status only after checking actual files at the specific distribution endpoint.
-
 ## Redistribution
 
-Mirror files only when the original license or terms permit redistribution. If permission is unclear, list the official source without asserting or creating a dataset mirror. The shared-archive link is a collection-level access reference, not evidence of permission for any individual row.
+Distribute sample packages only when the original license or terms permit redistribution. If permission is unclear, provide the official source link. Preserve source attribution and license notices in every published package.
 
 The selected 10x Visium HD and Xenium pages state CC BY 4.0. HEST's dataset card states CC BY-NC-SA 4.0 and requires acceptance of access conditions. Check the exact release and original cohort terms before any redistribution. Publication or software licenses do not automatically establish dataset or third-party image licensing. The HER2ST version 3.0 [Zenodo API record](https://zenodo.org/api/records/4751624) also explicitly states CC BY 4.0; this is a dataset-record license, independently checked rather than inferred from its publication. Other entries' dataset redistribution licenses remain **To be verified**.
 
@@ -63,6 +40,6 @@ Three representative processed packages and their dataset-level GitHub Release m
 
 ## Broken Links
 
-Open a [GitHub issue](https://github.com/ChlorineHi/ST-Path-Survey/issues) if an official or mirror link becomes unavailable. Include the dataset, accession/release, affected URL and the date/error observed. Browser challenges, gated downloads and rate limits should be distinguished from a missing resource.
+Open a [GitHub issue](https://github.com/ChlorineHi/ST-Path-Survey/issues) if an official or GitHub Release download link becomes unavailable. Include the dataset, accession/release, affected URL and the date/error observed. Browser challenges, gated downloads and rate limits should be distinguished from a missing resource.
 
-During the 2026-10-07 check, the curated tables rendered successfully through GitHub's GFM renderer and all nine publication DOIs matched their registered titles through Crossref. Direct automated requests to some GEO, Bruker/CosMx and bioRxiv pages encountered browser challenges; 10x requests encountered rate limits even though the dataset pages were readable through the browsing tool. GEO sample metadata was independently read from NCBI's small MINiML archives. HEST downloads remain gated, and the Baidu check reached only the extraction-code page. These conditions do not establish a broken link or confirm file-level download access.
+During the 2026-10-07 check, the curated tables rendered successfully through GitHub's GFM renderer and all nine publication DOIs matched their registered titles through Crossref. Direct automated requests to some GEO, Bruker/CosMx and bioRxiv pages encountered browser challenges; 10x requests encountered rate limits even though the dataset pages were readable through the browsing tool. GEO sample metadata was independently read from NCBI's small MINiML archives. HEST downloads remain gated. These conditions do not establish a broken link or confirm file-level download access.
