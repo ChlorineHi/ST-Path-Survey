@@ -1,12 +1,12 @@
 # Datasets and Benchmark Resources
 
-This page provides a curated collection of public datasets relevant to spatial transcriptomics–histopathology integration. It complements the representative dataset table in our survey with metadata, accessions, official access routes, benchmark uses, code, and supplementary mirror information.
+This page provides a curated collection of public datasets relevant to spatial transcriptomics–histopathology integration. It complements the representative dataset table in our survey with metadata, accessions, official access routes, benchmark uses, code, and representative sample downloads.
 
-Official repositories remain the primary source whenever available. A supplementary **ST-Survey** resource archive is maintained via [Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42), extraction code: `wq42`.
+Official repositories remain the primary source whenever available.
 
 - Official sources are preferred and remain authoritative.
-- Three selected vendor samples are available as verified GitHub Release assets; the Baidu folder was reported empty by the maintainer on 2026-10-07.
-- Official sources are retained for every row. GitHub asset links appear only for the three samples whose uploads were checked; other mirror entries remain `—`.
+- Three selected vendor samples are available as verified GitHub Release assets.
+- Official access links are retained for every dataset.
 - Redistribution depends on the original license and terms of use.
 
 ## Quick Access
@@ -14,10 +14,7 @@ Official repositories remain the primary source whenever available. A supplement
 - **Official dataset sources:** see the catalog tables below and the [source notes](#source-notes-and-preprocessing-resources).
 - **Downloadable sample packages:** [GitHub Releases](https://github.com/ChlorineHi/ST-Path-Survey/releases/tag/datasets-2026-10-07) — three ZIPs, 167.1 MB.
 - **Machine-readable CSV:** [dataset_catalog.csv](dataset_catalog.csv).
-- **Data access and mirror policy:** [ACCESS.md](ACCESS.md).
-- **Supplementary resource archive:** [ST-Survey on Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42). Extraction code: `wq42`.
-
-The shared archive is intended for representative datasets, lightweight processed files, metadata, annotations, or supplementary resources that can be redistributed under their corresponding licenses. Official repositories remain the authoritative source.
+- **Data access policy:** [ACCESS.md](ACCESS.md).
 
 ## Catalog Conventions
 
@@ -33,24 +30,22 @@ Scope describes the verified pairing in the selected release:
 
 `Spatial Scale` uses Spot-level, High-density, Cellular, Subcellular, or Multi-scale. Cellular rows may also provide subcellular transcript coordinates. Array pitch, optical pixel size, and analysis binning are distinct quantities; see source notes for numerical scales. H&E and IF are distinguished explicitly.
 
-**Mirror legend:** “GitHub Release ZIP” means a specific uploaded package was verified and the CSV uses `mirror_status=available` with its actual asset URL. `—` means not mirrored. The nine original survey-resource rows remain `not_mirrored`; three additional vendor-sample rows are `available` on GitHub. The Baidu folder was reported empty on 2026-10-07, and no Baidu upload is claimed. Preparing files locally alone does not establish a public mirror. See [ACCESS.md](ACCESS.md#mirror-status).
-
 ## Canonical Spot-Level ST–Histology Benchmarks
 
 The PDAC row is provisionally `boundary` because the official record verifies pathology annotation but public matched H&E and spatial files remain to be verified.
 
-| Dataset / Resource | Species | Tissue / Disease | Technology | Spatial Scale | Morphology | Scale | Typical Tasks | Accession / ID | Official Access | Mirror | Reference |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| cSCC (Ji et al.) | Homo sapiens | Skin / Cutaneous squamous cell carcinoma | Spatial Transcriptomics (ST); 10x Visium validation | Spot-level | H&E + pathology annotation | 12 ST sections / 4 patients; 4 Visium sections / 2 additional patients | Spatial-domain identification; Histology-to-expression prediction; Tumor microenvironment analysis | GSE144239 (ST SubSeries); GSE144240 (SuperSeries) | [Official source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE144239) | — | [Reference](#reference-cscc) |
-| DLPFC / spatialLIBD (HumanPilot) | Homo sapiens | Dorsolateral prefrontal cortex / Neurotypical donors | 10x Visium | Spot-level | H&E + cortical-layer annotation | 12 sections / 3 donors | Spatial-domain identification; Morphology-aware clustering; Cross-dataset benchmarking | 151507; 151508; 151509; 151510; 151669; 151670; 151671; 151672; 151673; 151674; 151675; 151676 | [Official source](https://github.com/LieberInstitute/HumanPilot#access-the-data) | — | [Reference](#reference-dlpfc) |
-| HER2ST | Homo sapiens | Breast / HER2-positive breast cancer | Spatial Transcriptomics (original ST arrays) | Spot-level | H&E + pathology annotation | 36 sections / 8 patients; 8 pathologist-annotated sections | Histology-to-expression prediction; Tumor heterogeneity analysis; Spatial-domain identification | 10.5281/zenodo.4751624 (version 3.0) | [Official source](https://zenodo.org/records/4751624) | — | [Reference](#reference-her2st) |
-| PDAC (Yousuf et al.) | Homo sapiens | Pancreas / Pancreatic ductal adenocarcinoma | 10x Visium | Spot-level | Histology-based pathology annotation; H&E: To be verified | 8 sections; patient count: Not specified | Tumor microenvironment analysis; Cell-type annotation; Spatial-domain identification (requires spatial files) | GSE205354 | [Official source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205354) | — | [Reference](#reference-pdac) |
+| Dataset / Resource | Species | Tissue / Disease | Technology | Spatial Scale | Morphology | Scale | Typical Tasks | Accession / ID | Official Access | Reference |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cSCC (Ji et al.) | Homo sapiens | Skin / Cutaneous squamous cell carcinoma | Spatial Transcriptomics (ST); 10x Visium validation | Spot-level | H&E + pathology annotation | 12 ST sections / 4 patients; 4 Visium sections / 2 additional patients | Spatial-domain identification; Histology-to-expression prediction; Tumor microenvironment analysis | GSE144239 (ST SubSeries); GSE144240 (SuperSeries) | [Official source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE144239) | [Reference](#reference-cscc) |
+| DLPFC / spatialLIBD (HumanPilot) | Homo sapiens | Dorsolateral prefrontal cortex / Neurotypical donors | 10x Visium | Spot-level | H&E + cortical-layer annotation | 12 sections / 3 donors | Spatial-domain identification; Morphology-aware clustering; Cross-dataset benchmarking | 151507; 151508; 151509; 151510; 151669; 151670; 151671; 151672; 151673; 151674; 151675; 151676 | [Official source](https://github.com/LieberInstitute/HumanPilot#access-the-data) | [Reference](#reference-dlpfc) |
+| HER2ST | Homo sapiens | Breast / HER2-positive breast cancer | Spatial Transcriptomics (original ST arrays) | Spot-level | H&E + pathology annotation | 36 sections / 8 patients; 8 pathologist-annotated sections | Histology-to-expression prediction; Tumor heterogeneity analysis; Spatial-domain identification | 10.5281/zenodo.4751624 (version 3.0) | [Official source](https://zenodo.org/records/4751624) | [Reference](#reference-her2st) |
+| PDAC (Yousuf et al.) | Homo sapiens | Pancreas / Pancreatic ductal adenocarcinoma | 10x Visium | Spot-level | Histology-based pathology annotation; H&E: To be verified | 8 sections; patient count: Not specified | Tumor microenvironment analysis; Cell-type annotation; Spatial-domain identification (requires spatial files) | GSE205354 | [Official source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205354) | [Reference](#reference-pdac) |
 
 ## Large-Scale Multimodal Collections
 
-| Dataset / Resource | Species | Tissue / Disease | Technology | Spatial Scale | Morphology | Scale | Typical Tasks | Accession / ID | Official Access | Mirror | Reference |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| HEST-1K (NeurIPS 2024 paper cohort) | Homo sapiens; Mus musculus | 26 organs / Multiple conditions; 25 cancer types | ST; 10x Visium; Visium HD; Xenium | Multi-scale | Paired H&E whole-slide images | 1,229 ST profiles / 153 cohorts / 26 organs | Histology-to-expression prediction; Cross-modal representation learning; Foundation-model pretraining; Cross-dataset benchmarking | MahmoodLab/hest (Hugging Face dataset ID) | [Official source](https://huggingface.co/datasets/MahmoodLab/hest) | — | [Reference](#reference-hest) |
+| Dataset / Resource | Species | Tissue / Disease | Technology | Spatial Scale | Morphology | Scale | Typical Tasks | Accession / ID | Official Access | Reference |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| HEST-1K (NeurIPS 2024 paper cohort) | Homo sapiens; Mus musculus | 26 organs / Multiple conditions; 25 cancer types | ST; 10x Visium; Visium HD; Xenium | Multi-scale | Paired H&E whole-slide images | 1,229 ST profiles / 153 cohorts / 26 organs | Histology-to-expression prediction; Cross-modal representation learning; Foundation-model pretraining; Cross-dataset benchmarking | MahmoodLab/hest (Hugging Face dataset ID) | [Official source](https://huggingface.co/datasets/MahmoodLab/hest) | [Reference](#reference-hest) |
 
 The HEST-1K row describes the NeurIPS 2024 paper cohort. Its live access endpoint includes later expansions. Do not replace the paper's 1,229 profiles / 153 cohorts with counts from a later release.
 
@@ -58,28 +53,28 @@ The HEST-1K row describes the NeurIPS 2024 paper cohort. Its live access endpoin
 
 CosMx is `boundary` (IF morphology for segmentation). Stereo-seq/MOSTA is `adjacent` (no matched H&E confirmed). Visium HD and the selected Xenium release are `core`. These scope labels are recorded in the CSV.
 
-| Dataset / Resource | Species | Tissue / Disease | Technology | Spatial Scale | Morphology | Scale | Typical Tasks | Accession / ID | Official Access | Mirror | Reference |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| CosMx NSCLC FFPE (prototype release) | Homo sapiens | Lung / Non-small-cell lung cancer | CosMx SMI prototype (targeted 960-plex RNA imaging) | Cellular | IF morphology (antibody-based segmentation); matched H&E: To be verified | 8 samples from 5 tissues; total cells: Not specified | Cell-type annotation; Niche analysis; Tumor microenvironment analysis | Not specified | [Official source](https://brukerspatialbiology.com/products/cosmx-spatial-molecular-imager/ffpe-dataset/nsclc-ffpe-dataset/) | — | [Reference](#reference-cosmx) |
-| Stereo-seq / MOSTA | Mus musculus | Whole embryo / multiple developing organs / Developmental atlas | Stereo-seq (DNA nanoball-patterned arrays) | High-density | No matched H&E confirmed; anatomical context | Section count: To be verified | Spatial-domain identification; Cell-type annotation; Developmental atlas analysis | CNP0001543 | [Official source](https://db.cngb.org/stomics/mosta/) | — | [Reference](#reference-stereo) |
-| Visium HD human colorectal cancer (FFPE, 10x release) | Homo sapiens | Sigmoid colon / Colorectal cancer | Visium HD Spatial Gene Expression (probe-based; pre-release protocol) | High-density | H&E | 1 section / 1 donor | Tumor microenvironment analysis; Spatial-domain identification; Super-resolution | visium-hd-cytassist-gene-expression-libraries-of-human-crc (10x page ID) | [Official source](https://www.10xgenomics.com/datasets/visium-hd-cytassist-gene-expression-libraries-of-human-crc) | — | [Reference](#reference-visiumhd) |
-| Xenium breast biomarkers (FFPE, 10x release) | Homo sapiens | Breast / Breast cancer (IDC/DCIS) and one normal sample | Xenium v1 (targeted imaging; custom 280-gene panel) | Cellular | Post-Xenium H&E + fluorescence morphology | 12 samples / 12 donors | Cell-type annotation; Tumor microenvironment analysis; Histology-to-expression prediction | xenium-ffpe-human-breast-biomarkers (10x page ID) | [Official source](https://www.10xgenomics.com/datasets/xenium-ffpe-human-breast-biomarkers) | — | [Reference](#reference-xenium) |
+| Dataset / Resource | Species | Tissue / Disease | Technology | Spatial Scale | Morphology | Scale | Typical Tasks | Accession / ID | Official Access | Reference |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| CosMx NSCLC FFPE (prototype release) | Homo sapiens | Lung / Non-small-cell lung cancer | CosMx SMI prototype (targeted 960-plex RNA imaging) | Cellular | IF morphology (antibody-based segmentation); matched H&E: To be verified | 8 samples from 5 tissues; total cells: Not specified | Cell-type annotation; Niche analysis; Tumor microenvironment analysis | Not specified | [Official source](https://brukerspatialbiology.com/products/cosmx-spatial-molecular-imager/ffpe-dataset/nsclc-ffpe-dataset/) | [Reference](#reference-cosmx) |
+| Stereo-seq / MOSTA | Mus musculus | Whole embryo / multiple developing organs / Developmental atlas | Stereo-seq (DNA nanoball-patterned arrays) | High-density | No matched H&E confirmed; anatomical context | Section count: To be verified | Spatial-domain identification; Cell-type annotation; Developmental atlas analysis | CNP0001543 | [Official source](https://db.cngb.org/stomics/mosta/) | [Reference](#reference-stereo) |
+| Visium HD human colorectal cancer (FFPE, 10x release) | Homo sapiens | Sigmoid colon / Colorectal cancer | Visium HD Spatial Gene Expression (probe-based; pre-release protocol) | High-density | H&E | 1 section / 1 donor | Tumor microenvironment analysis; Spatial-domain identification; Super-resolution | visium-hd-cytassist-gene-expression-libraries-of-human-crc (10x page ID) | [Official source](https://www.10xgenomics.com/datasets/visium-hd-cytassist-gene-expression-libraries-of-human-crc) | [Reference](#reference-visiumhd) |
+| Xenium breast biomarkers (FFPE, 10x release) | Homo sapiens | Breast / Breast cancer (IDC/DCIS) and one normal sample | Xenium v1 (targeted imaging; custom 280-gene panel) | Cellular | Post-Xenium H&E + fluorescence morphology | 12 samples / 12 donors | Cell-type annotation; Tumor microenvironment analysis; Histology-to-expression prediction | xenium-ffpe-human-breast-biomarkers (10x page ID) | [Official source](https://www.10xgenomics.com/datasets/xenium-ffpe-human-breast-biomarkers) | [Reference](#reference-xenium) |
 
 ## Downloadable Representative Samples
 
 Three real sample packages are now available in [GitHub Releases](https://github.com/ChlorineHi/ST-Path-Survey/releases/tag/datasets-2026-10-07), totaling **167.1 MB**. Each ZIP contains an expression matrix, matched H&E PNG images, spatial positions and scale factors, source/attribution notes and checksums. The original 10x dataset pages state **CC BY 4.0**. The files were retrieved through STOmicsDB and retained unchanged; GitHub's uploaded-asset SHA256 values matched the local ZIPs.
 
-These rows are additional vendor samples, separate from the nine survey resources above. `available` refers specifically to the GitHub assets linked here; it does not indicate a Baidu upload or a mirror of every survey dataset. They are representative single-section processed resources, not entire cohorts or full-resolution whole-slide scans.
+These rows are additional vendor samples, separate from the nine survey resources above. Each sample has a direct GitHub Release download link. They are representative single-section processed resources, not entire cohorts or full-resolution whole-slide scans.
 
-| Dataset / Resource | Species | Tissue / Disease | Technology | Spatial Scale | Morphology | Scale | Typical Tasks | Accession / ID | Official Access | Mirror | Reference |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+| Dataset / Resource | Species | Tissue / Disease | Technology | Spatial Scale | Morphology | Scale | Typical Tasks | Accession / ID | Official Access | Sample Download | Reference |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10x Visium human breast cancer (Block A Section 1) | Homo sapiens | Breast / Invasive ductal carcinoma | 10x Visium | Spot-level | H&E | 1 section; 3,798 observations in downloaded representation | Spatial-domain identification; Histology-to-expression prediction; Cross-dataset benchmarking | STDS0000027 (STOmicsDB dataset ID) | [10x](https://www.10xgenomics.com/cn/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0) | [GitHub Release ZIP](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/STDS0000027_ST_pathology_sample.zip) | [10x dataset](https://www.10xgenomics.com/cn/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0) |
 | 10x Visium mouse brain (coronal) | Mus musculus | Brain (coronal section) / Not specified | 10x Visium | Spot-level | H&E | 1 section; 2,702 observations in downloaded representation | Spatial-domain identification; Histology-to-expression prediction; Cross-dataset benchmarking | STDS0000022 (STOmicsDB dataset ID) | [10x](https://www.10xgenomics.com/datasets/mouse-brain-section-coronal-1-standard-1-1-0) | [GitHub Release ZIP](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/STDS0000022_ST_pathology_sample.zip) | [10x dataset](https://www.10xgenomics.com/datasets/mouse-brain-section-coronal-1-standard-1-1-0) |
 | 10x Visium human lymph node | Homo sapiens | Lymph node / Not specified | 10x Visium | Spot-level | H&E | 1 section; 4,039 observations in downloaded representation | Spatial-domain identification; Histology-to-expression prediction; Cross-dataset benchmarking | STDS0000024 (STOmicsDB dataset ID) | [10x](https://www.10xgenomics.com/datasets/human-lymph-node-1-standard-1-1-0) | [GitHub Release ZIP](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/STDS0000024_ST_pathology_sample.zip) | [10x dataset](https://www.10xgenomics.com/datasets/human-lymph-node-1-standard-1-1-0) |
 
 The downloaded lymph-node AnnData has **4,039 observations × 33,538 genes**. The current 10x 1.1.0 reference page reports **4,035 spots under tissue**; the cause of the difference was not independently established. All downloaded expression barcodes match the included spatial-position table. Preserve the downloaded representation's counts when describing this package.
 
-Download [the file manifest](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/DATASET_MANIFEST.json), [SHA256 checksums](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/SHA256SUMS.txt) and [release source/license notes](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/README.md) alongside the ZIPs. Cite the original 10x dataset and [STOmicsDB](https://doi.org/10.1093/nar/gkad933), rather than this supplementary mirror as the original data source.
+Download [the file manifest](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/DATASET_MANIFEST.json), [SHA256 checksums](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/SHA256SUMS.txt) and [release source/license notes](https://github.com/ChlorineHi/ST-Path-Survey/releases/download/datasets-2026-10-07/README.md) alongside the ZIPs. Cite the original 10x dataset and [STOmicsDB](https://doi.org/10.1093/nar/gkad933), rather than these supplementary downloads as the original data source.
 
 ## Source Notes and Preprocessing Resources
 
@@ -166,19 +161,11 @@ Chen et al. **Spatiotemporal transcriptomic atlas of mouse organogenesis using D
 
 **Biomarker Quantification in Breast Cancer using Xenium In Situ.** *bioRxiv* preprint (2025), linked by the official dataset page. [DOI: 10.64898/2025.12.08.692193](https://www.biorxiv.org/content/10.64898/2025.12.08.692193v1). Preprint full text was not independently accessible during this check; dataset metadata above comes from the official 10x page.
 
-## Shared Resources
-
-The **ST-Survey** shared archive is maintained as a supplementary resource collection on [Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42). Extraction code: `wq42`.
-
-It is intended to reduce repeated manual retrieval of commonly used public resources. Selected datasets, annotations, metadata, processed files, or supplementary resources may be included where redistribution is permitted. **The maintainer reported the Baidu folder empty on 2026-10-07. No Baidu datasets have been uploaded or confirmed mirrored in this session.** Three selected vendor samples are instead distributed through the GitHub Release linked above. No dataset-specific mirror path or filename is asserted.
-
-Users should cite the original dataset publications and repositories rather than the mirror itself. The mirror is an access convenience, not the original data source.
-
 ## Extending the Catalog
 
-Add a CSV record and a matching row/source note in the relevant table. Keep the 18 CSV columns in their current order; place publication year, venue, license, verification date, numerical scale details and additional primary-source URLs in `notes`. Semicolons delimit multiple values within a cell; CSV quoting handles commas. `official_url` contains one official URL. `mirror_url` contains one verified mirror URL, or is empty when no mirror is available.
+Add a CSV record and a matching row/source note in the relevant table. Keep the 17 CSV columns in their current order; place publication year, venue, license, verification date, numerical scale details and additional primary-source URLs in `notes`. Semicolons delimit multiple values within a cell; CSV quoting handles commas. `official_url` contains one official URL. `sample_download_url` contains a direct GitHub Release asset URL when a representative sample package is provided.
 
-Allowed `scope` values: `core`, `boundary`, `adjacent`. Allowed `mirror_status` values: `available`, `shared_archive`, `not_mirrored`, `unknown`. Update a row to `available` only after checking the actual shared files and their license. See [ACCESS.md](ACCESS.md) for evidence requirements.
+Allowed `scope` values: `core`, `boundary`, `adjacent`. Verify the published sample package, source attribution, license and SHA256 checksum before adding a download link. See [ACCESS.md](ACCESS.md) for data access details.
 
 Future processed datasets, benchmark splits, preprocessing scripts and model-ready files should document original accessions, sample IDs, registration/QC, gene sets, split unit, processing version, license and checksums. Add files or directories only when corresponding resources actually exist. Related method code remains in the [method catalog](methods.md) and [root library index](../README.md#useful-libraries).
 

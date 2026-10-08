@@ -226,9 +226,7 @@ A curated catalog of public ST–pathology datasets, accession numbers, official
 - [Dataset catalog](resources/datasets.md)
 - [Download three representative dataset packages on GitHub Releases](https://github.com/ChlorineHi/ST-Path-Survey/releases/tag/datasets-2026-10-07) — **167.1 MB** total; expression matrices, matched H&E images, spatial coordinates and checksums.
 - [Machine-readable CSV](resources/dataset_catalog.csv)
-- [Data access and mirror policy](resources/ACCESS.md)
-
-A supplementary **ST-Survey** resource archive is available through [Baidu Netdisk](https://pan.baidu.com/s/1YGvVOuaUttkKS5lZyS7jmA?pwd=wq42). Extraction code: `wq42`. The maintainer reported the Baidu folder empty on 2026-10-07. The three packages linked above are verified GitHub Release assets; no Baidu upload is claimed. Official sources remain authoritative.
+- [Data access policy](resources/ACCESS.md)
 
 ## Datasets and databases
 
@@ -286,4 +284,4 @@ Corrections, new papers, official code, dataset accessions, and benchmark update
 
 Third-party licenses and terms remain authoritative. Repository restructuring and maintenance were assisted by [OpenAI Codex](https://openai.com/codex/).
 
-_Last updated: 2026-10-07_
+_Last updated: 2026-10-08_

@@ -26,7 +26,7 @@ Thank you for helping maintain the ST-Path Survey resource.
 
 - Keep descriptions factual and concise.
 - Use en dashes for modality pairs (for example, ST–pathology).
-- Use `—` for unavailable resources; do not link to unofficial mirrors without explanation.
+- Use `—` for unavailable resources; prefer official sources and document the provenance of supplementary downloads.
 - Avoid performance claims unless the dataset, split, metric, and source are named.
 - Keep tables alphabetically or chronologically ordered within a defined section.
 
