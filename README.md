@@ -282,6 +282,6 @@ Corrections, new papers, official code, dataset accessions, and benchmark update
 }
 ```
 
-Third-party licenses and terms remain authoritative. Repository restructuring and maintenance were assisted by [OpenAI Codex](https://openai.com/codex/).
+Third-party licenses and terms remain authoritative. Repository restructuring and maintenance were assisted by [opencode](https://opencode.ai/).
 
 _Last updated: 2026-10-08_
